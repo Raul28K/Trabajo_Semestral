@@ -127,3 +127,7 @@
 .navbar-buttons1 a {
     margin: 0 10px; /* Espacio entre los botones */
 }
+
+.footer{
+text-align: center;
+}
