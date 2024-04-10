@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesPublicaciones.css">
+    <link rel="stylesheet" href="stylesPerfilUsuarios.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>RED SOCIAL</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/Logo" href="Imagenes/logo.png">
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <!-- Logo en el lado izquierdo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="Imagenes/logo.png" alt="Logo" width="60" height="60">
+            </a>
+            <div class="navbar-buttons">
+                <a href="index.html" class="btn btn-primary">INICIO</a>
+                <a href="Perfiles.html" class="btn btn-primary">PERFILES</a>
+                <a href="Categoria.html" class="btn btn-primary">CATEGORÍAS</a>
+                <a href="Soporte.html" class="btn btn-primary">SOPORTE</a>
+                
+                
+            </div>
+            <!-- Botones del navbar -->
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="BUSCAR" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">BUSCAR</button>
+            </form> 
+        </div>
+    </nav>
+<header>
+    <div class="perfil">
+        <img src="Imagenes/persona3.jpg" alt="Foto de Perfil">
+    </div>
+    <div class="informacion-usuario">
+        <h1>Maria Tereza Faúndez Silva <h1>
+
+        <p>Edad: 28 años</p>
+
+        <p>Carrera:  Profesora de Música 🎼</p>
+
+        <p>Amante de los libros 📚 y las conversaciones profundas.
+         Me gusta entender cómo funcionan las mentes humanas y cómo podemos mejorar nuestra salud mental.
+         En mi tiempo libre, disfruto de practicar yoga 🧘‍♀️ y tomar té 🍵.</p>
+    </div>
+</header>
+
+<main>
+    <div class="imagenes">
+            <a href="Publi1Usuario3.html">
+                <img src="Imagenes/Yo.reciclo3.jpg" alt="Publicación 1">
+            </a>
+            <a href="Publi2Usuario3.html">
+                <img src="Imagenes/programacion3.jpg" alt="Publicación 2">
+            </a>
+            <a href="Publi3Usuario3.html" >
+                <img src="Imagenes/Antonio.varas3.jpg" alt="Publicación 3">
+            </a>
+    </div>
+</main>
+
+<script>
+    // Función para abrir la imagen en una nueva ventana o pestaña
+    function abrirImagenEnNuevaPagina(src) {
+        window.open(src);
+    }
+
+    // Función para mostrar el cuadro de comentarios
+    function mostrarCuadroComentarios() {
+        document.getElementById("cuadro-comentarios").style.display = "block";
+    }
+
+    // Función para agregar un comentario
+    function agregarComentario() {
+        var comentario = document.getElementById("input-comentario").value;
+        var listaComentarios = document.getElementById("lista-comentarios");
+        var nuevoComentario = document.createElement("li");
+        nuevoComentario.textContent = comentario;
+        listaComentarios.appendChild(nuevoComentario);
+        document.getElementById("input-comentario").value = "";
+    }
+
+    function abrirImagenEnNuevaPagina(src) {
+        window.open(src);
+    }
+
+</script>
+
+<footer>
+    <!-- Pie de página -->
+</footer>
+
+</body>
+</html>

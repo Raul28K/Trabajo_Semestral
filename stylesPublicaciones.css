@@ -1,0 +1,52 @@
+.publicacion-container {
+    display: flex;
+    align-items: up; /* Alinea verticalmente los elementos */
+}
+
+.publicacion-column {
+    flex: 1;
+}
+
+.publicacion-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.publicacion-info {
+    margin-left: 50px; /* Espacio entre la imagen y la descripción */
+}
+
+#cuadro-comentarios {
+    background-color: #f9f9f9; /* Color de fondo para el cuadro de comentarios */
+    padding: 10px; /* Espaciado interno */
+}
+
+#cuadro-comentarios textarea {
+    width: calc(100% - 20px); /* Ancho ajustado */
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#cuadro-comentarios button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#lista-comentarios {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-comentarios li {
+    margin-bottom: 10px;
+    border-bottom: 5px solid #000000;
+    padding-bottom: 5px;
+}
+
+
+

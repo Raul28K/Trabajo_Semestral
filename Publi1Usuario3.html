@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="stylesPublicaciones.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="perfil2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Publicación 2</title>
+    <link rel="shortcut icon" type="image/logo3" href="Imagenes/logo.png">
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <!-- Logo en el lado izquierdo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="Imagenes/logo.png" alt="Logo" width="60" height="60">
+            </a>
+            <div class="navbar-buttons">
+                <a href="index.html" class="btn btn-primary">INICIO</a>
+                <a href="Perfiles.html" class="btn btn-primary">PERFILES</a>
+                <a href="Categoria.html" class="btn btn-primary">CATEGORÍAS</a>
+                <a href="Soporte.html" class="btn btn-primary">SOPORTE</a>
+            </div>
+            <!-- Botones del navbar -->
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="BUSCAR" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">BUSCAR</button>
+            </form> 
+        </div>
+    </nav>
+    <h2 class="title">Publicacion 1</h2>
+
+    <div class="container">
+
+<div class="publicacion-container">
+    <div class="publicacion-column">
+        <div class="publicacion-image">
+            <a href="PerfilUsuario3.html" >
+                <img src="Imagenes/Yo.reciclo3.jpg" alt="Publicacion1">
+            </a>
+        </div>
+    </div>
+    <div class="publicacion-column">
+        <div class="publicacion-info">
+        
+            <p>Ni las cuatro estaciones del año serían suficientes para definirme... </p>
+            <div id="cuadro-comentarios">
+                <h6>Dejar un Comentario</h6>
+                <textarea id="input-comentario" placeholder="Escribe tu comentario aquí"></textarea>
+                <button onclick="agregarComentario()">Enviar</button>
+                <h6>Comentarios</h6>
+                <ul id="lista-comentarios"></ul>    <!-- Los comentarios se agregarán dinámicamente con JavaScript --> 
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+<script>
+    // Función para agregar un comentario (misma función que en el archivo principal)
+     function agregarComentario() {
+        var comentario = document.getElementById("input-comentario").value;
+        var listaComentarios = document.getElementById("lista-comentarios");
+        var nuevoComentario = document.createElement("li");
+        nuevoComentario.textContent = comentario;
+        listaComentarios.appendChild(nuevoComentario);
+        document.getElementById("input-comentario").value = "";
+        }
+</script>
+
+<footer>
+    <!-- Pie de página -->
+</footer>
+
+</body>
+</html>

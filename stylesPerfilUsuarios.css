@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.perfil img {
+    width: 200px; /* Tamaño de la foto de perfil */
+    height: 200px;
+    border-radius: 25%; /* Para que la foto de perfil sea redonda */
+    margin-right: 30px;
+}
+
+.informacion-usuario h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.informacion-usuario p {
+    margin: 5px 0;
+    color: #666;
+}
+
+main {
+    padding: 20px;
+}
+
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Mostrar 3 imágenes en una fila */
+    gap: 10px; /* Espacio entre las imágenes */
+}
+
+.imagenes img {
+    width: 100%;
+    height: auto;
+    cursor: pointer; /* Cambiar el cursor al pasar sobre las imágenes */
+}
+
+/* Estilos para la página de comentarios */
+
+#cuadro-comentarios {
+    display: none; /* Inicialmente oculto */
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#cuadro-comentarios textarea {
+    width: calc(100% - 20px);
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#cuadro-comentarios button {
+    background-color: #3897f0;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#lista-comentarios {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-comentarios li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
