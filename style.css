@@ -15,155 +15,7 @@
 
 /* Estilo del contenedor del carrusel con clase 'slider-box' */
 .slider-box {
-    width: 40%; /* Ancho del 80% del contenedor */
-    margin: 100px auto; /* Margen en la parte superior e inferior, centrado horizontalmente */
-    overflow: hidden; /* Ocultar el desbordamiento */
-    border-radius: 10px; /* Bordes redondeados */
-}
-
-/* Estilo de la lista desordenada dentro del carrusel */
-.slider-box ul {
-    display: flex; /* Mostrar los elementos en línea */
-    padding: 0; /* Sin rellado en la lista */
-    width: 400%; /* Ancho del 400% para contener las imágenes */
-    animation: slide 20s infinite; /* Animación del carrusel */
-}
-
-/* Estilo de la lista desordenada dentro del carrusel */
-.slider-box ul {
-    display: flex; /* Mostrar los elementos en línea */
-    padding: 0; /* Sin rellado en la lista */
-    width: 400%; /* Ancho del 400% para contener las imágenes */
-    animation: slide 4s ; /* Animación del carrusel, duración de 8 segundos */
-}
-
-/* Animación 'slide' del carrusel */
-@keyframes slide {
-    0%, 100% { transform: translateX(0); } /* Comienza y termina sin desplazamiento */
-    75% { transform: translateX(-100%); } /* Primera imagen, sin desplazamiento */
-    75% { transform: translateX(-100%); } /* Segunda imagen, desplazamiento completo */
-    75% { transform: translateX(-100%); } /* Tercera imagen, se mantiene */
-}
-
-
-/* Estilo de cada elemento de la lista (cada imagen) */
-.slider-box li {
-    width: 25%; /* Ancho del 25% para ocupar un cuarto del contenedor */
-    list-style: none; /* Sin viñetas/bolitas de lista */
-}
-
-/* Estilo de las imágenes dentro de cada elemento de la lista */
-.slider-box img {
-    width: 100%; /* Ancho del 100% para ocupar todo el espacio disponible */
-    height: auto; /* Altura automática para mantener la proporción */
-}
-
-/* Animación 'slide' del carrusel */
-@keyframes slide {
-    0% { transform: translateX(0); } /* Comienza sin desplazamiento */
-    100% { transform: translateX(-100%); } /* Termina con desplazamiento completo */
-}
-
-/* Estilo del navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #333;
-    padding: 10px 20px;
-    width: 100%;
-    z-index: 1000;
-}
-
-/* Estilo de los enlaces en el navbar */
-.navbar a {
-    display: inline-block;
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-/* Estilo de los enlaces al pasar el mouse */
-.navbar a:hover {
-    background-color: #555;
-    color: #000;
-}
-
-/* Estilo del contenedor de los botones en el barra de navegación */
-.navbar-buttons {
-    display: flex;
-    justify-content: flex-end; /* Alinea los elementos al final (derecha) */
-    margin-top: 0; /* Puedes ajustar este margen según sea necesario */
-}
-
-/* Estilo de los botones en el contenedor de la barra de navegación */
-.navbar-buttons a {
-    margin-left: 10px; /* Espacio entre los botones */
-    color: #fff; /* Color del texto */
-    background-color: #333; /* Color de fondo del botón */
-    padding: 10px 15px; /* Espaciado interno del botón */
-    border-radius: 5px; /* Bordes redondeados */
-    text-decoration: none; /* Quitar subrayado del enlace */
-    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
-}
-
-/* Estilo de los botones en el contenedor de la barra de navegación al pasar el mouse */
-.navbar-buttons a:hover {
-    background-color: #555; /* Cambia el color de fondo al pasar el mouse */
-}
-
-/* Estilo del contenedor de los botones inferiores */
-.navbar-buttons1 {
-    display: flex;
-    justify-content: center; /* Centrar los elementos horizontalmente */
-    margin-top: 20px; /* Espacio superior */
-}
-
-/* Estilo de los botones en el contenedor inferior */
-.navbar-buttons1 a {
-    margin: 0 10px; /* Espacio entre los botones */
-}
-
-.footer {
-    text-align: center; /* Alinear texto al centro */
-    padding: 20px 0; /* Espaciado interno arriba y abajo */
-}
-
-.slider-box {
-    width: 100%;
-    overflow: hidden;
-    margin: 20px auto;
-}
-
-.slider {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    transition: transform 0.5s ease;
-}
-
-.slider li {
-    flex: 0 0 100%;
-}/* Reseteo de estilos para todos los elementos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Estilo del título con clase 'title' */
-.title {
-    text-align: center; /* Centrar el texto horizontalmente */
-    font-size: 40px; /* Tamaño de la fuente */
-    padding-top: 50px; /* Espacio de relleno en la parte superior */
-}
-
-/* Estilo del contenedor del carrusel con clase 'slider-box' */
-.slider-box {
-    width: 40%; /* Ancho del 80% del contenedor */
+    width: 40%; /* Cambiado a ancho del 80% del contenedor */
     margin: 10px auto; /* Margen en la parte superior e inferior, centrado horizontalmente */
     overflow: hidden; /* Ocultar el desbordamiento */
     border-radius: 10px; /* Bordes redondeados */
@@ -175,7 +27,7 @@
     display: flex; /* Mostrar los elementos en línea */
     padding: 0; /* Sin rellado en la lista */
     width: 400%; /* Ancho del 400% para contener las imágenes */
-    animation: slide 20s infinite; /* Animación del carrusel */
+    animation: slide 20s linear infinite; /* Cambiado a linear */
 }
 
 /* Animación 'slide' del carrusel */
@@ -201,17 +53,29 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #333;
     padding: 10px 20px;
     width: 100%;
     z-index: 1000;
+    background-color: transparent; /* Hacer transparente el fondo del navbar */
+}
+
+/* Estilo del fondo detrás de los botones */
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Color del fondo con transparencia */
+    z-index: -1; /* Colocar detrás de los botones */
 }
 
 /* Estilo de los enlaces en el navbar */
 .navbar a {
     display: inline-block;
     padding: 10px;
-    color: #fff;
+    color: #fafafa;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
@@ -220,7 +84,7 @@
 /* Estilo de los enlaces al pasar el mouse */
 .navbar a:hover {
     background-color: #555;
-    color: #fff;
+    color: #f6f6f6;
 }
 
 /* Estilo del contenedor de los botones en el barra de navegación */
@@ -233,7 +97,7 @@
 /* Estilo de los botones en el contenedor de la barra de navegación */
 .navbar-buttons a {
     margin-left: 10px; /* Espacio entre los botones */
-    color: #fff; /* Color del texto */
+    color: #ffffff; /* Color del texto */
     background-color: #333; /* Color de fondo del botón */
     padding: 10px 15px; /* Espaciado interno del botón */
     border-radius: 5px; /* Bordes redondeados */
@@ -262,7 +126,6 @@
     text-align: center; /* Alinear texto al centro */
     padding: 20px 0; /* Espaciado interno arriba y abajo */
 }
-
 
 .slider img {
     width: 100%;
