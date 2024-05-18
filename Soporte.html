@@ -13,6 +13,15 @@
     <title>RED SOCIAL</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/Logo" href="Imagenes/logo.png">
+
+    <style>
+        .char-counter {
+            font-size: 0.9em;
+            color: gray;
+            float: right;
+        }
+    </style>
+
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
@@ -58,7 +67,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" class="form-control" rows="5" required></textarea>
+                    <textarea id="mensaje" name="mensaje" class="form-control" rows="5" required minlength="10" maxlength="500"></textarea>
+                    <div class="char-counter" id="charCounter">0/500</div>
                 </div>
                 <div class="mb-3">
                     <label for="ubicacion">Ubicación:</label>
@@ -80,6 +90,83 @@
             <p>&copy; 2024 Buzón de Correos</p>
         </footer>
     </div>    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var modal = document.getElementById("ModalSop");
+            var form = document.getElementById("formulario-soporte");
+            var nombreInput = document.getElementById("nombre");
+            var telefonoInput = document.getElementById("telefono");
+            var correoInput = document.getElementById("correo");
+            var mensajeInput = document.getElementById("mensaje");
+            var charCounter = document.getElementById("charCounter");
+    
+            form.addEventListener("submit", function(event) {
+                var nombreValido = nombreInput.value.match(/^[A-Za-z\s]+$/);
+                var telefonoValido = telefonoInput.value.match(/^\d+$/);
+                var correoValido = correoInput.validity.valid;
+                var mensajeValido = mensajeInput.value.length >= 10 && mensajeInput.value.length <= 500;
+    
+                if (!nombreValido) {
+                    event.preventDefault();
+                    nombreInput.setCustomValidity("Solo se permiten letras y espacios");
+                    nombreInput.reportValidity();
+                } else {
+                    nombreInput.setCustomValidity("");
+                }
+    
+                if (!telefonoValido) {
+                    event.preventDefault();
+                    telefonoInput.setCustomValidity("Solo se permiten números");
+                    telefonoInput.reportValidity();
+                } else {
+                    telefonoInput.setCustomValidity("");
+                }
+    
+                if (!correoValido) {
+                    event.preventDefault();
+                    correoInput.setCustomValidity("Por favor ingresa una dirección de correo electrónico válida");
+                    correoInput.reportValidity();
+                } else {
+                    correoInput.setCustomValidity("");
+                }
+    
+                if (!mensajeValido) {
+                    event.preventDefault();
+                    mensajeInput.setCustomValidity("El mensaje debe tener entre 10 y 500 caracteres");
+                    mensajeInput.reportValidity();
+                } else {
+                    mensajeInput.setCustomValidity("");
+                }
+    
+                if (nombreValido && telefonoValido && correoValido && mensajeValido && form.checkValidity()) {
+                    event.preventDefault();
+                    modal.style.display = "block";
+                    form.reset();
+                    charCounter.textContent = "0/500";
+                } else {
+                    form.reportValidity();
+                }
+            });
+    
+            var span = document.getElementsByClassName("close")[0];
+    
+            span.onclick = function() {
+                modal.style.display = "none";
+            };
+    
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+    
+            mensajeInput.addEventListener("input", function() {
+                charCounter.textContent = `${mensajeInput.value.length}/500`;
+            });
+        });
+        </script>
+
 </body>
 </html>
 
